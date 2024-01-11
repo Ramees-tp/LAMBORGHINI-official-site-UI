@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hexagon{
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+
+:root{
+    --bg: gray;
+    --clr: white;
+}
+
+.hello{
+    position: relative;
+    gap: 40px;
+    
+}
+.hexa{
+    
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 76%, 50% 100%, 0 75%);
+    background: var(--clr);
+    transition: .5s;
+}
+.hexa span{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 76%, 50% 100%, 0% 75%);
+    background: var(--bg);
+    transition: .5s;
+    z-index: 5px;
+    
+}
+.hexa span img{
+    /* filter: invert(1); */
+    transition: .5s;
+}
+.hexa:hover span{
+    transition: .5s;
+    background: var(--clr);
+}
+.hexa:hover img{
+    transition: .5s;
+    transform: scale(1.3);
+}
+
